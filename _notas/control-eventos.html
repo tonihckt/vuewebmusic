@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Curso Vue.js</title>
+  </head>
+  <body>
+    <div id="app">
+      <!-- <button @click="sumar">sumar 1</button>
+      <button v-on:click="restar">restar 1</button> -->
+
+
+      <!-- sin utilizar los methodos -->
+      <button @click="contador++">sumar 1</button>
+      <button @click="contador--">restar 1</button>
+
+      El contador esta en {{contador}}
+
+    </div>
+
+    <script src="https://unpkg.com/vue"></script>
+    <script type="text/javascript">
+      let app = new Vue({
+        el: "#app",
+        data: {
+          contador: 0
+        },
+        // methods: {
+        //   sumar: function () {
+        //     this.contador++
+        //   },
+        //   restar: function () {
+        //     this.contador--
+        //   },
+        // },
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vue.js</title>
+  </head>
+  <body>
+    <div id="app">
+      <!-- MANERAS DE MOSTRAR  USANDO template -->
+      <!-- <template v-if="mostrar">
+        <h1>Este es mi título</h1>
+        <h2>Este es mi subtítulo</h2>
+        Hola {{ nombre }}
+        <a v-bind:href="url" target="_blank">Ir a {{ pagina }}</a>
+      </template> -->
+
+      <!-- MANERAS DE MOSTRAR  USANDO v-show no se puede utilizan con con templates -->
+
+      <div v-show="mostrar">
+        <h1>Este es mi título</h1>
+        <h2>Este es mi subtítulo</h2>
+        Hola {{ nombre }}
+        <!-- <a :href="url" target="_blank">Ir a {{ pagina }}</a> -->
+        <a v-bind:href="url" target="_blank">Ir a {{ pagina }}</a>
+      </div>
+      <div v-show="!mostrar">
+        <p>EN EL CASO QUE SEA FALSE</p>
+      </div>
+    </div>
+
+    <!-- implementar vue -->
+    <!-- <script src="https://unpkg.com/vue"></script> -->
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type="text/javascript">
+      let app = new Vue({
+        el: "#app",
+        data: {
+          nombre: "Toni",
+          url: "https://google.com",
+          pagina: "Google",
+          mostrar: true
+        }
+      });
+    </script>
+  </body>
+</html>
