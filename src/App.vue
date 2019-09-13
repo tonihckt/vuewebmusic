@@ -1,6 +1,7 @@
 <template lang="pug">
 #app
-  img(src='./assets/logo.png')
+  //- img(src='./assets/logo.png')
+  img(src='https://tonihckt.github.io/vuewebmusic/dist/logo.png')
   h1 
     b-alert(show dismissible variant='success')  Hello {{ title }}! 
   select(v-model="selectedCountry")
