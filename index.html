@@ -1,11 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>vueweb</title>
+    <!-- Add Bootstrap and Bootstrap-Vue CSS to the <head> section -->
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="/assets/css/bootstrap.min.css"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="/assets/css/bootstrap-vue.min.css"
+    />
   </head>
   <body>
     <div id="app"></div>
+    <!-- Add Vue and Bootstrap-Vue JS just before the closing </body> tag -->
+    <script src="/assets/js/vue.min.js"></script>
+    <script src="/assets/js/bootstrap-vue.min.js"></script>
+    <!-- If you need to support legacy browsers @babel/polyfill: emulate a full ES2015 + environment -->
+    <script src="/assets/js/polyfill.min.js"></script>
     <script src="/dist/build.js"></script>
   </body>
 </html>

@@ -1,7 +1,8 @@
 <template lang="pug">
 #app
   img(src='./assets/logo.png')
-  h1 {{ title }}
+  h1 
+    b-alert(show dismissible variant='success')  Hello {{ title }}! 
   select(v-model="selectedCountry")
     option(v-for="country in contries" v-bind:value="country.value") {{ country.name}}
   spinner(v-show="loading")
